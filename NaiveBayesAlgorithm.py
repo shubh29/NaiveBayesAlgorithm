@@ -25,3 +25,5 @@ def loadDocument():
               documentTerms[file] = [w.lower() for w in nltk.word_tokenize(fileRead) if w.lower() not in stopwords and re.compile(r'^[a-z]+$').search(w.lower()) is not None]
               print(len(documentTerms[file]))
 loadDocument()
+
+#testing commit
