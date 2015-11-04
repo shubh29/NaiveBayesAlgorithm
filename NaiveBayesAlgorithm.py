@@ -131,4 +131,17 @@ print("Score(crypto):", math.exp(logProbabilityOfCrypto + math.log(prior_crypto)
 # Score(dino)  : 2601.76647058
 # Score(crypto): 25239.089932
 
+<<<<<<< HEAD
 ################################ End of File ##################################
+=======
+def loadDocument():
+    for file in os.listdir(os.getcwd()):
+         if file.endswith(".txt"):
+              fileOpen = open(file,'r')
+              fileRead = fileOpen.read()
+              documentTerms[file] = [w.lower() for w in nltk.word_tokenize(fileRead) if w.lower() not in stopwords and re.compile(r'^[a-z]+$').search(w.lower()) is not None]
+              print(len(documentTerms[file]))
+loadDocument()
+
+#testing commit
+>>>>>>> origin/master
